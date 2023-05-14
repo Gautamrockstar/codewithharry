@@ -1,0 +1,371 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+*,
+::after,
+::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: 'Roboto', sans-serif;
+}
+body{
+    font-size: 62.5%;
+}
+.flex-center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.flex-justify{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+h1{
+    font-size: 3rem;
+    font-weight: 900;
+}
+h2{
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+h3{
+    font-size: 2rem;
+    font-weight: 500;
+}
+h4{
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+h5,h6{
+    font-size: 1rem;
+    font-weight: 500;
+}
+a{
+    text-decoration: none;
+}
+li{
+    list-style: none;
+}
+.container{
+    max-width: 1600px;
+    width: 80%;
+    margin: auto;
+}
+
+
+.navbar img{
+    width: 60px;
+    height: 60px;
+    display: block;
+    margin: auto;
+}
+.logo {
+    color: aliceblue;
+    padding-left: 2rem;
+}
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 3rem;
+    position: fixed;
+    width: 100%;
+    height: 13vh;
+    background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5));
+}
+.navbar .menu-list{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.menu-list li{
+    margin: 0 2rem;
+}
+.menu-list a{
+    font-size: 2rem;
+    font-weight: 700;
+    color: aliceblue;
+    position: relative;
+}
+.menu-list a::after{
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 3px;
+    background-color: bisque;
+    bottom: -5px;
+    left: 0;
+    transition: all 0.2s ease;
+}
+.menu-list a:hover{
+    color: bisque;
+    padding: 1rem;
+}
+.menu-list a:hover::after{
+    width: 100%;
+    
+}
+.burger{
+    display: none;
+}
+/* ////////////////////////// media query navbar ////////////////////// */
+
+@media (max-width: 1080px) {
+    
+
+.menu-list{
+    flex-direction: column;
+    margin-top: 30rem;
+    right: 1rem;
+    padding: 5rem;
+    position: absolute;
+    right: -400px;
+    transition: all 0.5s ease-in-out;
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6));
+    
+}
+
+.menu-list li{
+    padding: 1.5rem 0;
+}
+.burger{
+    display: block;
+    cursor: pointer;
+    position: absolute;
+    right: 2rem;
+    top: 1rem;
+}
+.burger img{
+   width: 30px;
+    height: 20px;
+    filter: invert(100%);
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+}
+
+.v-class{
+    right: 0;
+}
+.main-slide{
+    height: 100vh;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.menu-list a{
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+
+}   
+/* ////////////////////////////////main-slide///////////////////////////// */
+.main-slide{
+    width: 100%;
+    height: 90vh;
+    background: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)), url(img/bg.jpg);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    /* background: radial-gradient(#68A4C4 50%, rgba(104, 164, 196, 0.4) 52%); */
+    display: grid;
+    place-content: center;
+}
+.main-slide img{
+    height: 400px;
+    width: 400px;
+    border-radius: 50%;
+}
+.main-slide .text{
+    color: aliceblue;
+    width: 50%;
+    margin-right: 10rem;
+}
+.main-slide .text h1{
+    padding-bottom: 2rem;
+}
+.main-slide .text h3 span{
+    color: rgb(236, 151, 82);
+    font-weight: 900;
+    letter-spacing: 3px;
+}
+.main-slide .text p{
+    font-size: 1rem;
+    padding-top: 2rem;
+}
+
+
+/* ////////////////////////// media query main-slide////////////////////// */
+@media (max-width: 1080px) {
+
+    .main-slide{
+        height: 95vh;
+    }
+
+.container img{
+    width: 200px;
+    height: 200px;
+    margin-top: 5rem;
+}
+
+.container .text{
+    width: 90%;
+    margin: auto;
+}
+.container{
+    margin-top: 10rem;
+    flex-direction: column;
+    text-align: center;
+}
+
+}
+
+/* //////////////////////////////////////////////course///////////////////////////////////////// */
+
+.course{
+    text-align: center;
+    margin-top: 3rem;
+}
+
+.courseList{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.courseList .box{
+    width: 30%;
+    height: 500px;
+    box-shadow: 0 0 10px gray;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+.courseList .box img{
+    width: 100%;
+    height: 50%;
+    border-radius: 15px;
+    object-position: center;
+}
+
+.courseList .box .explain{
+    width: 100%;
+    height: 50%;
+    text-align: left;
+    padding: 1rem;
+}
+.courseList .box .explain h5,h4,p{
+    margin-bottom: 1rem;
+}
+
+.courseList .box .explain p{
+    height: 45%;
+    font-size: 1rem;
+}
+.courseList .box .explain a{
+    padding: 8px 12px;
+    background-color: #7E22CE;
+    font-size: 1rem;
+    color: aliceblue;
+    border-radius: 25px;
+}
+.courseList .box .explain a:hover{
+    background-color: #bb85ea;
+}
+
+/* ////////////////////////////////// media couses ///////////////////// */
+@media (max-width: 1080px) {
+.courseList{
+flex-direction: column;
+}
+
+.courseList .box{
+    width: 100%;
+    height: 550px;
+    margin-bottom: 2rem;
+}
+.courseList .box img{
+    margin-top: 0rem;
+    height: 50%;
+}
+.courseList .box .explain p{
+    height: 40%;
+}
+.courseList .box .explain h5,h4,p{
+    margin: 0.5rem;
+}
+.courseList .box .explain a{
+    margin-top: 1rem;
+}
+}
+
+
+/* ////////////////////////////////////////Testimonials //////////////////////////////////// */
+
+.reviews{
+    margin: 3rem auto;
+    text-align: center;
+}
+
+.testimonials{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.user{
+    text-align: left;
+    margin: 1rem;
+    width: 50%;
+    height: 200px;
+    background: linear-gradient(rgb(245, 245, 245),rgb(245, 245, 245));
+    padding: 2rem;
+    border-radius: 10px;
+}
+
+.user p{
+    font-size: 1rem;
+    padding-left: 1rem;
+    text-align: justify;
+}
+.user img{
+    filter: invert(75%);
+    width: 20px;
+    height: 20px;
+}
+.user .name{
+    padding-left: 1.5rem;
+    line-height: 0.5;
+}
+.name h6{
+    font-weight: 100;
+}
+
+/* /////////////////////////////// media testimonials/////////////////// */
+
+@media (max-width: 1080px) {
+    .testimonials{
+        flex-direction: column;
+    }
+    .user{
+        width: 100%;
+        height: 250px;
+        padding: 1rem;
+    }
+    .user img{
+        margin-top: 0;
+    }
+    .user .name{
+        padding-left: 1.5rem;
+        line-height: 1;
+        text-align: left;
+        margin-top: 1rem;
+
+    }
+    .name h6{
+        padding-left: 0.5rem;
+    }
+    
+}
